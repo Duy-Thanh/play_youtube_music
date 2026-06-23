@@ -28,7 +28,7 @@ do {
     Stop-Process -Name "ffmpeg" -Force -ErrorAction SilentlyContinue
     
     # Kích nổ luồng: core_worker sẽ mở một cửa sổ PowerShell phụ để chạy, hiện phần trăm tải của yt-dlp ở đó.
-    Start-Process powershell -ArgumentList "-NoProfile", "-File", "C:\mediamtx\core_worker.ps1", "-Link", "$ytmuxlink"
+    Start-Process powershell -ArgumentList "-NoProfile", "-File", "core_worker.ps1", "-Link", "$ytmuxlink"
     
     # Chờ 2 giây để luồng bắt nhịp phẳng lỳ rồi cho mày rảnh tay gõ tiếp bài sau luôn
     Start-Sleep -Seconds 2
